@@ -28,6 +28,12 @@ const myObj = {
     snacks : "cheetos",
     movie: "Titanic",
 }
-for (const [key,value] of myObj) {
-    //console.log(key, ':-', value) //objects cannot be traversed using for of loop
+// for (const [key,value] of myObj) {
+//     //console.log(key, ':-', value) //objects cannot be traversed using for of loop
+// }
+
+
+// we can apply for in loop in objects
+for(const key in myObj){
+    console.log(myObj[key])
 }
