@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141;">
+    <ul>
+        <li class="images"><img src="https://images.pexels.com/photos/11295166/pexels-photo-11295166.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" id="coffee"
+             alt="coffee" width="200px"></li>
+        <li class="images"><img src="https://images.pexels.com/photos/11295166/pexels-photo-11295166.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" id="coffee"
+             alt="coffee" width="200px"></li>
+        <li class="images"><img src="https://images.pexels.com/photos/11295166/pexels-photo-11295166.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" id="coffee"
+             alt="coffee" width="200px"></li>
+    </ul>
+    <script>
+        // document.getElementById('coffee').onclick = function() {
+        //     alert("coffee clicked")
+        // }   // not the best way
+
+        // addEventListener
+        // document.getElementById('coffee').addEventListener('click', function(){
+        //     alert("coffee clicked")
+        // }, false) // by default its false
+
+        // type, timestamps, PreventDefault, target, toElement, srcElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keycode
+
+        // to remove images on click
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName == 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target. parentNode
+            removeIt.remove()
+        }
+    })
+
+    </script>
+</body>
+</html>
