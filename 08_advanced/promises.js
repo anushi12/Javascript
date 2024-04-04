@@ -80,3 +80,12 @@ async function consumepromisefive(){
       console.log(error)
    }
 }consumepromisefive()
+
+fetch('https://api.github.com/users/anushi12')
+.then((response) => {
+    return response.json
+})
+.then((data)=>{
+    console.log(data)
+})
+.catch((err)=> console.log(error))
